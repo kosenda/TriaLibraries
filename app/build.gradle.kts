@@ -1,3 +1,5 @@
+val ktlint: Configuration by configurations.creating
+
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
@@ -63,4 +65,32 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+
+    // ktlint
+    ktlint(libs.ktlint) {
+        attributes {
+            attribute(Bundling.BUNDLING_ATTRIBUTE, objects.named(Bundling.EXTERNAL))
+        }
+    }
+}
+
+
+tasks.create<JavaExec>("ktlintCheck") {
+    description = "Check Kotlin code style."
+    classpath = ktlint
+    mainClass.set("com.pinterest.ktlint.Main")
+    args = listOf(
+        "src/**/*.kt",
+        "--reporter=checkstyle,output=${layout.buildDirectory.get()}/reports/ktlint/ktlint-result.xml",
+    )
+    isIgnoreExitValue = true
+}
+
+tasks.create<JavaExec>("ktlintFormatting") {
+    description = "Fix Kotlin code style deviations."
+    classpath = ktlint
+    mainClass.set("com.pinterest.ktlint.Main")
+    args("-F", "src/**/*.kt")
+    // https://github.com/pinterest/ktlint/issues/1391#issuecomment-1331954612
+    jvmArgs("--add-opens=java.base/java.lang=ALL-UNNAMED")
 }

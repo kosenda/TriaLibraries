@@ -15,11 +15,21 @@ jobs:
 
       - run:
           command: sudo gem install bundler:2.4.12
+
       - run:
           command: bundle install --path vendor/bundle
+
+      - run:
+          name: ktlint-check
+          command: ./gradlew --continue ktlintCheck
+
       - run:
           name: test
           command: ./gradlew testDebug --stacktrace
+
+      - run:
+          name: run-danger-file
+          command: bundle exec danger --verbose
 
 workflows:
   test:
