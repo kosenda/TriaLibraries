@@ -24,6 +24,6 @@ fun TopBar(onBack: () -> Unit, onClickGitHub: () -> Unit) {
             IconButton(onClick = onClickGitHub) {
                 Icon(painter = painterResource(id = R.drawable.ic_github_mark), contentDescription = "")
             }
-        }
+        },
     )
 }

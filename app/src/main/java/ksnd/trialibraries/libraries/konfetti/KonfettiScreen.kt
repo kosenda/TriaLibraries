@@ -17,11 +17,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavHostController
 import ksnd.trialibraries.R
 import ksnd.trialibraries.common.TopBar
+import ksnd.trialibraries.ui.theme.TriaLibrariesTheme
 import nl.dionsegijn.konfetti.compose.KonfettiView
 import nl.dionsegijn.konfetti.compose.OnParticleSystemUpdateListener
 import nl.dionsegijn.konfetti.core.Party
@@ -38,7 +40,7 @@ fun KonfettiScreen(
     KonfettiScreenContent(
         parties = parties,
         updateParties = viewModel::updateParties,
-        onBack = navHostController::navigateUp
+        onBack = navHostController::navigateUp,
     )
 }
 
@@ -104,8 +106,20 @@ private fun KonfettiScreenContent(
                             updateParties(emptyList())
                         }
                     }
-                }
+                },
             )
         }
+    }
+}
+
+@Preview
+@Composable
+private fun PreviewKonfettiScreenContent() {
+    TriaLibrariesTheme {
+        KonfettiScreenContent(
+            parties = emptyList(),
+            updateParties = {},
+            onBack = {},
+        )
     }
 }
