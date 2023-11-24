@@ -3,4 +3,7 @@
 
     <!-- Library name-->
     <string name="konfetti">Konfetti</string>
+
+    <!-- Library url -->
+    <string name="konfetti_url">https://github.com/DanielMartinus/Konfetti</string>
 </resources>
