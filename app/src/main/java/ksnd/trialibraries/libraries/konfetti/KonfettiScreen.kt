@@ -68,6 +68,7 @@ private fun KonfettiScreenContent(
     Scaffold(
         topBar = {
             TopBar(
+                titleResId = R.string.konfetti,
                 onBack = onBack,
                 onClickGitHub = { uriHandler.openUri(uri = konfettiUrl) },
             )

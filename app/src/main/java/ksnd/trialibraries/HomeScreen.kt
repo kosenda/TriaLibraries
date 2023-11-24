@@ -1,5 +1,6 @@
 package ksnd.trialibraries
 
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -16,22 +17,40 @@ import ksnd.trialibraries.ui.theme.TriaLibrariesTheme
 
 @Composable
 fun HomeScreen(navHostController: NavHostController) {
+    val libraries: List<LibraryInfo> = listOf(
+        LibraryInfo(
+            textId = R.string.konfetti,
+            onClick = { navHostController.navigate(NavRoute.Konfetti.route) },
+        ),
+        LibraryInfo(
+            textId = R.string.page_curl,
+            onClick = { navHostController.navigate(NavRoute.PageCurl.route) },
+        ),
+    )
+
     Surface {
         Column(
             modifier = Modifier
                 .fillMaxSize()
                 .verticalScroll(rememberScrollState()),
         ) {
-            TransitionButton(
-                modifier = Modifier
-                    .padding(horizontal = 16.dp)
-                    .padding(top = 16.dp),
-                textId = R.string.konfetti,
-                onClick = { navHostController.navigate(NavRoute.Konfetti.route) },
-            )
+            libraries.forEach { library ->
+                TransitionButton(
+                    modifier = Modifier
+                        .padding(horizontal = 16.dp)
+                        .padding(top = 16.dp),
+                    textId = library.textId,
+                    onClick = library.onClick,
+                )
+            }
         }
     }
 }
+
+private data class LibraryInfo(
+    @StringRes val textId: Int,
+    val onClick: () -> Unit,
+)
 
 @Preview
 @Composable

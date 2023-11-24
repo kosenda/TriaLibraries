@@ -1,5 +1,6 @@
 package ksnd.trialibraries.common
 
+import androidx.annotation.StringRes
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -12,9 +13,13 @@ import ksnd.trialibraries.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopBar(onBack: () -> Unit, onClickGitHub: () -> Unit) {
+fun TopBar(
+    @StringRes titleResId: Int,
+    onBack: () -> Unit,
+    onClickGitHub: () -> Unit,
+) {
     TopAppBar(
-        title = { Text(stringResource(id = R.string.konfetti)) },
+        title = { Text(stringResource(id = titleResId)) },
         navigationIcon = {
             IconButton(onClick = onBack) {
                 Icon(painter = painterResource(id = R.drawable.ic_arrow_back_24), contentDescription = "")
