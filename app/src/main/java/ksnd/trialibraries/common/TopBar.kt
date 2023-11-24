@@ -12,12 +12,17 @@ import ksnd.trialibraries.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TopBar(onBack: () -> Unit) {
+fun TopBar(onBack: () -> Unit, onClickGitHub: () -> Unit) {
     TopAppBar(
         title = { Text(stringResource(id = R.string.konfetti)) },
         navigationIcon = {
             IconButton(onClick = onBack) {
                 Icon(painter = painterResource(id = R.drawable.ic_arrow_back_24), contentDescription = "")
+            }
+        },
+        actions = {
+            IconButton(onClick = onClickGitHub) {
+                Icon(painter = painterResource(id = R.drawable.ic_github_mark), contentDescription = "")
             }
         },
     )

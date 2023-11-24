@@ -3,6 +3,8 @@ val ktlint: Configuration by configurations.creating
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.ksp)
 }
 
 android {
@@ -54,6 +56,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.lifecycle.runtime.compose)
 
     // compose
     implementation(libs.activity.compose)
@@ -62,6 +65,14 @@ dependencies {
     implementation(libs.androidx.compose.ui)
     implementation(libs.androidx.compose.ui.tooling)
     implementation(libs.androidx.compose.ui.tooling.preview)
+
+    // Hilt
+    implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+    implementation(libs.androidx.hilt.navigation.compose)
+
+    // Konfetti
+    implementation(libs.konfetti)
 
     // ktlint
     ktlint(libs.ktlint) {
