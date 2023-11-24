@@ -53,6 +53,7 @@ dependencies {
     implementation(libs.lifecycle.runtime.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
+    implementation(libs.androidx.appcompat)
 
     // compose
     implementation(libs.activity.compose)
@@ -68,6 +69,9 @@ dependencies {
             attribute(Bundling.BUNDLING_ATTRIBUTE, objects.named(Bundling.EXTERNAL))
         }
     }
+
+    // navigation
+    implementation(libs.androidx.navigation.compose)
 }
 
 
