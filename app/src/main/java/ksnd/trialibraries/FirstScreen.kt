@@ -4,9 +4,12 @@ import androidx.compose.animation.AnimatedVisibilityScope
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -17,6 +20,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import ksnd.trialibraries.libraries.konfetti.KonfettiScreen
 
 @Composable
 fun FirstScreen() {
@@ -40,6 +44,7 @@ fun FirstScreen() {
         val navController = rememberNavController()
         Column(
             modifier = Modifier
+                .verticalScroll(rememberScrollState())
                 .statusBarsPadding()
                 .fillMaxSize(),
         ) {
@@ -48,7 +53,10 @@ fun FirstScreen() {
                 startDestination = NavRoute.Home.route,
             ) {
                 fadeComposable(NavRoute.Home.route) {
-                    HomeScreen()
+                    HomeScreen(navController)
+                }
+                fadeComposable(NavRoute.Konfetti.route) {
+                    KonfettiScreen(navController)
                 }
             }
         }
@@ -57,4 +65,5 @@ fun FirstScreen() {
 
 sealed class NavRoute(val route: String) {
     data object Home : NavRoute(route = "home")
+    data object Konfetti : NavRoute(route = "konfetti")
 }
