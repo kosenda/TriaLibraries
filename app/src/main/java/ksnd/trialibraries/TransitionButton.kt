@@ -65,7 +65,7 @@ fun TransitionButton(
 fun TransitionButton() {
     TriaLibrariesTheme {
         Surface(color = MaterialTheme.colorScheme.surface) {
-            TransitionButton(textId = R.string.konfetti){}
+            TransitionButton(textId = R.string.konfetti) {}
         }
     }
 }
