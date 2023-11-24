@@ -24,7 +24,7 @@ class Presets {
                 rotation = Rotation(),
                 colors = listOf(0xfce18a, 0xff726d, 0xf4306d, 0xb48def),
                 emitter = Emitter(duration = 100, TimeUnit.MILLISECONDS).max(30),
-                position = Position.Relative(0.5, 1.0)
+                position = Position.Relative(0.5, 1.0),
             )
 
             return listOf(
@@ -46,7 +46,7 @@ class Presets {
                     maxSpeed = 80f,
                     spread = 10,
                     emitter = Emitter(duration = 100, TimeUnit.MILLISECONDS).max(10),
-                )
+                ),
             )
         }
 
@@ -59,8 +59,8 @@ class Presets {
                     spread = 360,
                     colors = listOf(0xfce18a, 0xff726d, 0xf4306d, 0xb48def),
                     emitter = Emitter(duration = 100, TimeUnit.MILLISECONDS).max(100),
-                    position = Position.Relative(0.5, 0.3)
-                )
+                    position = Position.Relative(0.5, 0.3),
+                ),
             )
         }
 
@@ -73,14 +73,15 @@ class Presets {
                 spread = Spread.SMALL,
                 colors = listOf(0xfce18a, 0xff726d, 0xf4306d, 0xb48def),
                 emitter = Emitter(duration = 5, TimeUnit.SECONDS).perSecond(30),
-                position = Position.Relative(0.0, 0.5)
+                position = Position.Relative(0.0, 0.5),
             )
 
             return listOf(
                 party,
                 party.copy(
-                    angle = party.angle - 90, // flip angle from right to left
-                    position = Position.Relative(1.0, 0.5)
+                    // flip angle from right to left
+                    angle = party.angle - 90,
+                    position = Position.Relative(1.0, 0.5),
                 ),
             )
         }
@@ -95,8 +96,8 @@ class Presets {
                     spread = Spread.ROUND,
                     colors = listOf(0xfce18a, 0xff726d, 0xf4306d, 0xb48def),
                     emitter = Emitter(duration = 5, TimeUnit.SECONDS).perSecond(100),
-                    position = Position.Relative(0.0, 0.0).between(Position.Relative(1.0, 0.0))
-                )
+                    position = Position.Relative(0.0, 0.0).between(Position.Relative(1.0, 0.0)),
+                ),
             )
         }
     }

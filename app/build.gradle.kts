@@ -83,6 +83,9 @@ dependencies {
 
     // navigation
     implementation(libs.androidx.navigation.compose)
+
+    // Page curl
+    implementation(libs.pagecurl)
 }
 
 

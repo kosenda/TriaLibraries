@@ -19,6 +19,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import ksnd.trialibraries.libraries.konfetti.KonfettiScreen
+import ksnd.trialibraries.libraries.pagecurl.PageCurlScreen
 
 @Composable
 fun FirstScreen() {
@@ -55,6 +56,9 @@ fun FirstScreen() {
                 fadeComposable(NavRoute.Konfetti.route) {
                     KonfettiScreen(navController, hiltViewModel())
                 }
+                fadeComposable(NavRoute.PageCurl.route) {
+                    PageCurlScreen(navController)
+                }
             }
         }
     }
@@ -63,4 +67,5 @@ fun FirstScreen() {
 sealed class NavRoute(val route: String) {
     data object Home : NavRoute(route = "home")
     data object Konfetti : NavRoute(route = "konfetti")
+    data object PageCurl : NavRoute(route = "page_curl")
 }

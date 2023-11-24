@@ -3,7 +3,9 @@
 
     <!-- Library name-->
     <string name="konfetti">Konfetti</string>
+    <string name="page_curl">Page Curl</string>
 
     <!-- Library url -->
     <string name="konfetti_url">https://github.com/DanielMartinus/Konfetti</string>
+    <string name="page_curl_url">https://github.com/oleksandrbalan/pagecurl</string>
 </resources>
