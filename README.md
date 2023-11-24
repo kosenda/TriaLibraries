@@ -8,6 +8,7 @@ Repository for experimenting with libraries that I personally would like to use 
 
 ## List of libraries in use
 
-|Name|Description|Image|
+|Name|Description|Video|
 |---|---|---|
-|[Konfetti](https://github.com/DanielMartinus/Konfetti)|Can display confetti in a good way.|<img src="https://github.com/kosenda/TriaLibraries/assets/60963155/eedc2701-a1a7-47da-aee8-fc14ca05b2bf" width="300">|
+|[Konfetti](https://github.com/DanielMartinus/Konfetti)|Can display confetti in a good way.|<video src="https://github.com/kosenda/TriaLibraries/assets/60963155/5928859e-e8a3-4cac-ac02-d214a1915df9">|
+|[Page Curl](https://github.com/oleksandrbalan/pagecurl)|Can reproduce page-turning.|<video src="https://github.com/kosenda/TriaLibraries/assets/60963155/b73d2631-5205-4100-bdea-c1ce56851bf4">|
