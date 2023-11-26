@@ -18,6 +18,7 @@ lifecycle-runtime-ktx = "2.6.2"
 activity-compose = "1.8.1"
 androidx-compose-compiler = "1.5.4"
 pagecurl = "1.4.1"
+tagcloud = "1.1.0"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -47,6 +48,9 @@ ktlint = { group = "com.pinterest.ktlint", name = "ktlint-cli", version.ref = "k
 
 # Page curl
 pagecurl = { group = "io.github.oleksandrbalan", name = "pagecurl", version.ref = "pagecurl" }
+
+# Tag cloud
+tagcloud = { group = "io.github.oleksandrbalan", name = "tagcloud", version.ref = "tagcloud" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

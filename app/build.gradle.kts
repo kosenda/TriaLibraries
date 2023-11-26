@@ -86,6 +86,9 @@ dependencies {
 
     // Page curl
     implementation(libs.pagecurl)
+
+    // Tag cloud
+    implementation(libs.tagcloud)
 }
 
 

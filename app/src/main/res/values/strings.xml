@@ -4,8 +4,10 @@
     <!-- Library name-->
     <string name="konfetti">Konfetti</string>
     <string name="page_curl">Page Curl</string>
+    <string name="tag_cloud">Tag Cloud</string>
 
     <!-- Library url -->
     <string name="konfetti_url">https://github.com/DanielMartinus/Konfetti</string>
     <string name="page_curl_url">https://github.com/oleksandrbalan/pagecurl</string>
+    <string name="tag_cloud_url">https://github.com/oleksandrbalan/tagcloud</string>
 </resources>

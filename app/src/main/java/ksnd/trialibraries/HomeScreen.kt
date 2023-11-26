@@ -26,6 +26,10 @@ fun HomeScreen(navHostController: NavHostController) {
             textId = R.string.page_curl,
             onClick = { navHostController.navigate(NavRoute.PageCurl.route) },
         ),
+        LibraryInfo(
+            textId = R.string.tag_cloud,
+            onClick = { navHostController.navigate(NavRoute.TagCloud.route) },
+        ),
     )
 
     Surface {
