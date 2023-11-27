@@ -33,7 +33,7 @@ private fun HtmlTextScreenContent(onBack: () -> Unit) {
 
     val examplePairList = listOf(
         "<b> - Bold text" to "<b>ぼーるど</b>",
-        "<i> - Italic text"  to "<i>いたりっく</i>",
+        "<i> - Italic text" to "<i>いたりっく</i>",
         "<strike> - Striked text" to "<strike>とりけし</strike>",
         "<u> - Underlined text" to "<u>あんだーらいん</u>",
         "<a href=\"...\"> - Link" to "<a href=\"https://github.com/ch4rl3x/HtmlText\">りんく</a>",
