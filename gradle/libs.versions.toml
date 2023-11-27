@@ -7,6 +7,7 @@ androidx-hilt = "1.1.0"
 androidx-lifecycle = "2.6.2"
 androidx-navigation = "2.7.5"
 hilt = "2.48.1"
+html-text = "2.0.0-beta01"
 kotlin = "1.9.20"
 konfetti = "2.0.3"
 ksp = "1.9.20-1.0.14"
@@ -39,6 +40,9 @@ androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lif
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
 androidx-hilt-navigation-compose = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "androidx-hilt" }
+
+# html-text
+html-text = { group = "de.charlex.compose.material3", name = "material3-html-text", version.ref = "html-text" }
 
 # Konfetti
 konfetti = { group = "nl.dionsegijn", name = "konfetti-compose", version.ref = "konfetti" }

@@ -18,6 +18,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import ksnd.trialibraries.libraries.htmltext.HtmlTextScreen
 import ksnd.trialibraries.libraries.konfetti.KonfettiScreen
 import ksnd.trialibraries.libraries.pagecurl.PageCurlScreen
 import ksnd.trialibraries.libraries.tagcloud.TagCloudScreen
@@ -63,6 +64,9 @@ fun FirstScreen() {
                 fadeComposable(NavRoute.TagCloud.route) {
                     TagCloudScreen(navController)
                 }
+                fadeComposable(NavRoute.HtmlText.route) {
+                    HtmlTextScreen(navController)
+                }
             }
         }
     }
@@ -73,4 +77,5 @@ sealed class NavRoute(val route: String) {
     data object Konfetti : NavRoute(route = "konfetti")
     data object PageCurl : NavRoute(route = "page_curl")
     data object TagCloud : NavRoute(route = "tag_cloud")
+    data object HtmlText : NavRoute(route = "html_text")
 }

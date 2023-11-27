@@ -13,6 +13,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import de.charlex.compose.material3.HtmlText
 import ksnd.trialibraries.ui.theme.TriaLibrariesTheme
 
 @Composable
@@ -29,6 +30,10 @@ fun HomeScreen(navHostController: NavHostController) {
         LibraryInfo(
             textId = R.string.tag_cloud,
             onClick = { navHostController.navigate(NavRoute.TagCloud.route) },
+        ),
+        LibraryInfo(
+            textId = R.string.html_text,
+            onClick = { navHostController.navigate(NavRoute.HtmlText.route) },
         ),
     )
 

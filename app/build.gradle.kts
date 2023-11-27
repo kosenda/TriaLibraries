@@ -71,6 +71,9 @@ dependencies {
     ksp(libs.hilt.compiler)
     implementation(libs.androidx.hilt.navigation.compose)
 
+    // html-text
+    implementation(libs.html.text)
+
     // Konfetti
     implementation(libs.konfetti)
 
