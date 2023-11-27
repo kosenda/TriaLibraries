@@ -38,7 +38,7 @@ private fun HtmlTextScreenContent(onBack: () -> Unit) {
         "<u> - Underlined text" to "<u>あんだーらいん</u>",
         "<a href=\"...\"> - Link" to "<a href=\"https://github.com/ch4rl3x/HtmlText\">りんく</a>",
         "<span style=\"color: #FF00FF\"> - Colored text" to "<span style=\"color: #FF00FF\">すぱん</span>",
-        "<span style=\"color: navy\"> - Colored text" to "<span style=\"color: navy\">すぱん</span>",
+        "<span style=\"color: lime\"> - Colored text" to "<span style=\"color: lime\">すぱん</span>",
         "<font color=\"#FF0000\"> - Colored text" to "<font color=\"#FF0000\">ふぉんと</font>",
         "<font color=\"teal\"> - Colored text" to "<font color=\"teal\">ふぉんと</font>",
     )
